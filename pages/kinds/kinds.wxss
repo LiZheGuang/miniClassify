@@ -1,0 +1,259 @@
+page, .main {
+  height: 100vh;
+}
+
+/* page{padding-bottom: 100rpx;} */
+
+.menu-left {
+  float: left;
+  width: 164rpx;
+  height: 100%;
+  border-right: 1rpx solid #ddd;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.menu-right {
+  float: right;
+  width: 586rpx;
+  height: 100%;
+  overflow: hidden;
+}
+
+.menu-left .cate-list {
+  line-height: 40rpx;
+  text-align: center;
+  padding: 25rpx 0;
+  font-size: 28rpx;
+}
+
+.menu-left .cate-list.on {
+  border-left: 3px solid #b2242f;
+  color: #b2242f;
+  font-size: 0.9rem;
+}
+
+.cate-box {
+  padding: 30rpx;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+.cate-box .cate-banner image {
+  height: 192rpx;
+  display: block;
+  width: 100%;
+}
+
+.cate-box .cate-title {
+  line-height: 30rpx;
+  padding: 40rpx 0 60rpx;
+  text-align: center;
+  color: #959595;
+  font-size: 0.8rem;
+  position: relative;
+}
+
+.cate-title:before, .cate-title:after {
+  width: 42rpx;
+  height: 1rpx;
+  background-color: #959595;
+  content: '';
+  position: absolute;
+  top: 54rpx;
+}
+
+.cate-title:after {
+  right: 125rpx;
+}
+
+.cate-title:before {
+  left: 125rpx;
+}
+
+.product-list {
+  display: inline-block;
+  width: 140rpx;
+  height: 190rpx;
+  font-size: 0.68rem;
+  text-align: center;
+  margin: 0 53rpx 32rpx 0;
+  vertical-align: top;
+}
+
+.product-list:nth-child(3n) {
+  margin-right: 0;
+}
+
+.product-list image {
+  width: 96rpx;
+  height: 96rpx;
+  margin-bottom: 10rpx;
+}
+
+.scearch {
+  height: 100rpx;
+  width: 100%;
+  background: #ebebeb;
+  box-sizing: border-box;
+  padding: 15rpx 20rpx;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.scearch image {
+  position: absolute;
+  left: 32rpx;
+  width: 34rpx;
+  height: 34rpx;
+  top: 32rpx;
+}
+
+.scearch input {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  background: white;
+  border-radius: 10rpx;
+  padding-left: 60rpx;
+}
+
+.scearch .isShowFale {
+  width: 85%;
+}
+
+.leftMsg {
+  width: 15%;
+  text-align: center;
+  font-size: 26rpx;
+  position: relative;
+  left: 5rpx;
+}
+
+.scearch_bottom_t {
+  font-size: 26rpx;
+  color: #959595;
+  padding: 20rpx;
+}
+
+.scearch_bottom_t_item {
+  font-size: 26rpx;
+  color: white;
+  padding: 10rpx 15rpx;
+  display: inline-block;
+  background: #cecece;
+  border-radius: 5rpx;
+}
+
+.qkbtn {
+  font-size: 30rpx;
+  border: solid 1rpx #cecece;
+  padding: 15rpx 30rpx;
+  border-radius: 50rpx;
+  width: 250rpx;
+  display: block;
+  margin: auto;
+  text-align: center;
+}
+
+.itemRight:last-child {
+  padding-bottom: 200rpx;
+}
+
+.fixBox {
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 100%;
+  background: white;
+  position: fixed;
+  right: 40rpx;
+  bottom: 200rpx;
+  box-shadow: 0px 8rpx 40rpx -8rpx rgba(189, 196, 203, 0.4);
+}
+
+.fixBox button::after {
+  border: transparent;
+}
+
+.fixBox {
+  overflow: hidden;
+}
+
+.fixBox button image {
+  width: 45rpx;
+  height: 45rpx;
+}
+
+.fixBox button {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+.fixBox_bottom {
+  bottom: 60rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixBox_bottom image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.fixBox_bottomShow {
+  position: fixed;
+  padding: 20rpx 35rpx;
+  background: rgba(0, 0, 0, 0.5);
+  right: 203rpx;
+  bottom: 150rpx;
+  max-width: 300rpx;
+  border-radius: 15rpx;
+  display: flex;
+  flex-wrap: wrap;
+  /* align-items: center; *//* justify-content: space-between; */
+}
+
+.fixBox_bottomShow_img {
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 100%;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fixBox_bottomShow_img image {
+  width: 36rpx;
+  height: 36rpx;
+}
+
+.fixBox_bottomShow_msg {
+  color: white;
+  font-size: 24rpx;
+  margin-top: 10rpx;
+}
+
+.fixBox_bottomShow_img_top {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.fixBox_bottomShow_img_top {
+  margin-right: 40rpx;
+  /* margin-bottom: 20rpx; */
+  margin-top: 15rpx;
+}
+
+.fixBox_bottomShow_img_top:nth-child(3n) {
+  margin-right: 0;
+}

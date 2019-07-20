@@ -1,0 +1,87 @@
+<view class="scearch" >
+    <image src="../../img/sousuo.png"></image>
+    <input class="{{isShowSroll == false ? 'isShowFale':''}}" placeholder="搜索商品" bindfocus="bindfocus"></input>
+    <view class="leftMsg" wx:if="{{isShowSroll == false}}" bindtap="clickIsShowSroll">取消</view>
+</view>
+<block wx:if="{{!isShowSroll}}">
+
+<view class="scearch_bottom">
+  <view class="scearch_bottom_t">历史搜索</view>
+  <view class="scearch_bottom_t">
+    <view class="scearch_bottom_t_item">会员</view>
+  </view>
+  <view class="qkbtn">清空历史搜索</view>
+
+</view>
+</block>
+
+<view class="main" wx:if="{{isShowSroll}}">
+  <scroll-view class="menu-left" scroll-y scroll-with-animation="{{true}}">
+    <view class="cate-list {{curIndex==index?'on':''}}" wx:for="{{menu}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+      <text>{{item.name}}</text>
+    </view>
+  </scroll-view>
+  
+  <scroll-view class="menu-right" scroll-y scroll-top="{{scrollTop}}" scroll-with-animation scroll-into-view="{{scrollId}}" bindscroll="bindscroll">
+    <view class="item itemRight" id="{{item.id}}" data-index="{{index}}" wx:for="{{detail}}" wx:key="{{item.id}}">
+      <view class="cate-box">
+        <view class="cate-banner" bindtap="bannerDetails">
+          <image src="{{item.banner}}"></image>
+        </view>
+        <view class="cate-title">
+          <text>{{item.title}}</text>
+        </view>
+        <view class="cate-product">
+          <view class="product-list" bindtap="productDetails" wx:for="{{item.productList}}" wx:key="{{index}}" wx:for-item="product">
+            <image src="{{product.thumb}}"></image>
+            <view class="product-list-name">
+              <text>{{product.name}}</text>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>
+
+
+<!-- 遮挡窗 -->
+<view class="fixBox">
+    <button open-type="contact">
+      <image src="../../img/kf.png"></image>
+    </button>
+</view>
+<!-- 遮挡窗 -->
+
+<!-- 遮挡窗 -->
+<view class="fixBox fixBox_bottom" bindtap="clickShowMask">
+      <image src="../../img/guanbi.png"></image>
+</view>
+<view class="fixBox_bottomShow" wx:if="{{maskButton}}">
+<view class="fixBox_bottomShow_img_top">
+    <view class="fixBox_bottomShow_img">
+      <image src="../../img/guanbi.png"></image>
+    </view>
+    <view class="fixBox_bottomShow_msg">购物车</view>
+</view>
+
+<view class="fixBox_bottomShow_img_top">
+    <view class="fixBox_bottomShow_img">
+      <image src="../../img/guanbi.png"></image>
+    </view>
+    <view class="fixBox_bottomShow_msg">购物车</view>
+</view>
+<view class="fixBox_bottomShow_img_top">
+    <view class="fixBox_bottomShow_img">
+      <image src="../../img/guanbi.png"></image>
+    </view>
+    <view class="fixBox_bottomShow_msg">购物车</view>
+</view>
+<view class="fixBox_bottomShow_img_top">
+    <view class="fixBox_bottomShow_img">
+      <image src="../../img/guanbi.png"></image>
+    </view>
+    <view class="fixBox_bottomShow_msg">购物车</view>
+</view>
+</view>
+<!-- 遮挡窗 -->

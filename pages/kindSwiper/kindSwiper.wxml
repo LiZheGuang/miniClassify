@@ -1,0 +1,47 @@
+<view class="main">
+      <scroll-view class="menu-left" scroll-y scroll-with-animation="{{true}}">
+        <view class="cate-list {{curIndex==index?'on':''}}" wx:for="{{menu}}" wx:key="{{item.id}}" data-id="{{item.id}}" data-index="{{index}}" bindtap="switchCategory">
+            <text>{{item.name}}</text>
+        </view>
+    </scroll-view>  
+     <!-- <swiper vertical="true" class="menu-right" current="{{toView}}" >
+        <swiper-item wx:for="{{detail}}" wx:key="{{item.id}}">
+            <scroll-view class="cate-box" id="{{item.id}}" scroll-y>
+                <view class="cate-banner" bindtap="bannerDetails">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="cate-product">
+                    <view class="product-list" bindtap="productDetails" wx:for="{{item.productList}}" wx:key="{{index}}" wx:for-item="product">
+                        <image src="{{product.thumb}}"></image>
+                        <view class="product-list-name">
+                            <text>{{product.name}}</text>
+                        </view>
+                    </view>
+                </view>
+            </scroll-view>
+        </swiper-item>
+    </swiper>  -->
+    <scroll-view class="menu-right" scroll-y>
+        <view  class="item" wx:for="{{detail}}" wx:key="{{item.id}}">
+             <view class="cate-box" id="{{item.id}}" >
+                <view class="cate-banner" bindtap="bannerDetails">
+                    <image src="{{item.banner}}"></image>
+                </view>
+                <view class="cate-title">
+                    <text>{{item.title}}</text>
+                </view>
+                <view class="cate-product">
+                    <view class="product-list" bindtap="productDetails" wx:for="{{item.productList}}" wx:key="{{index}}" wx:for-item="product">
+                        <image src="{{product.thumb}}"></image>
+                        <view class="product-list-name">
+                            <text>{{product.name}}</text>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
